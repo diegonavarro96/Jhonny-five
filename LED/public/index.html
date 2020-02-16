@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LED</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="blink">BLINK</button>
+    <button id="on">ON</button>
+    <button id="off">OFF</button>
+    <br>
+    <input type="number" id="pwm" placeholder="brightness 0-255" max="255" min="0">
+    <br>
+    <script src="/LEDHandle.js"></script>
+    <div id ="chart"></div>
+</body>
+</html>
