@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LED</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
@@ -17,7 +17,11 @@
     <br>
     <input type="number" id="pwm" placeholder="brightness 0-255" max="255" min="0">
     <br>
+    <button id ="start">START/RESET</button>
+    <div id="container">
+        <canvas id ="lineChart" ></canvas>
+    </div>
+
     <script src="/LEDHandle.js"></script>
-    <div id ="chart"></div>
 </body>
 </html>
