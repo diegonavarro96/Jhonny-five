@@ -22,6 +22,7 @@ function sleep(milliseconds) {
 
 //socket setup
 const io = socket(server);
+let x= 0.1;
  
 const board = new five.Board({
     port: "COM5",
@@ -52,6 +53,12 @@ board.on("ready", function() {
       led.stop();
       led.off();
     });
+    setInterval(function() {
+      socket.emit('Test',{
+        sample : Math.random()*10
+      });
+    }, 100);
+    
   });
 
 });
