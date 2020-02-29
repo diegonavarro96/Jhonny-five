@@ -31,8 +31,11 @@ const board = new five.Board({
 
 board.on("ready", function() {
   const led = new five.Led(13);
+  let valueAnteroir =0
+  let first = true
   //led.blink(1000);
   //var sensor = new five.Sensor("A1");
+  const potentiometer = new five.Sensor("A3");
 
   io.on('connection',function(socket){
    // console.log('made socket connection',socket.id) 
@@ -54,10 +57,19 @@ board.on("ready", function() {
       led.off();
     });
     setInterval(function() {
+        const {value, raw} = potentiometer;
+        if (first){
+          first = false
+          valueAnteroir = value
+        }
+        if(value > valueAnteroir +2 || value< valueAnteroir -2){
+          console.log("sensor = ",value)
       socket.emit('Test',{
-        sample : Math.random()*10
+        sample : value
       });
-    }, 100);
+    }
+    valueAnteroir = value;
+    }, 50);
     
   });
 
