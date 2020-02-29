@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-    <h1>PWM CONTROLLER</h1>
+    <div class = "row">
+    <div class= "column1">
+    <h1 class ="glow">PWM CONTROLLER</h1>
     <button id="blink">BLINK</button>
     <button id="on">ON</button>
     <button id="off">OFF</button>
@@ -19,7 +21,12 @@
     <br>
     <input type="number" id="setPoint" placeholder="SET POINT" max="255" min="0">
     <br>
-    <input type="number" id="AM" placeholder="A/M" >
+    <label for="AM">Automatic</label>
+        <input name="AM"id= "Automatic" type="radio"
+        value="Automatic">
+        <label for="AM">Manual</label>
+        <input  name="AM" id=Manual type="radio"
+        value="Manual">
     <br>
     <input type="number" id="KC" placeholder="KC" >
     <br>
@@ -30,9 +37,13 @@
     <input type="number" id="T" placeholder="T" >
     <br>
     <button id ="start">START/RESET</button>
+    </div>
+    <div class ="column2">
     <div id="container">
         <canvas id ="lineChart" ></canvas>
     </div>
+</div>
+</div>
 
     <script src="/LEDHandle.js"></script>
 </body>

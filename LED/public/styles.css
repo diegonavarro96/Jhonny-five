@@ -1,7 +1,42 @@
-h1{
-    background-color: red;
-}
+
 #container{
     height: 200px;
-    width: 50%;
+    width: 100%;
 }
+body{
+    background-color: rgba(1, 43, 51, 0.842);
+    font-family: cursive;
+    color: rgb(3, 22, 75);
+    text-shadow: 2px 2px rgb(16, 68, 16);
+}
+input[type = "number"], textarea {
+    font-size: 1em;
+    width: 12em;
+    font-family: arial; 
+    border: none;
+    padding: 2px;
+
+    background: rgba(4, 25, 116, 0.39);
+}
+
+.column1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+  }
+  .column2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+

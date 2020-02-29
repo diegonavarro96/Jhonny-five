@@ -37,7 +37,7 @@ socket.on('Test',function(data){
   yAxis.push(data.sample)
   x++;
   }
-  if(x >20){
+  if(x >10){
     x =0;
     getSamples = false;
     const myChart = document.getElementById('lineChart');
